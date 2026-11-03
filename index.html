@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domenico Spoto, Data Scientist</title>
+  <meta name="description" content="Data scientist in Rome building credit risk models: probability of default and propensity to pay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Spectral:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <a class="home" href="./">Domenico Spoto</a>
+    <nav aria-label="Main">
+      <a href="./" aria-current="page">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Domenico Spoto</h1>
+      <p class="lead">Data scientist in Rome. I build credit risk models, probability of default and propensity to pay, for debt collection at doValue, working in Python, PySpark and SQL on Databricks and Azure.</p>
+      <ul class="links">
+        <li><a href="cv.pdf">CV (PDF)</a></li>
+        <li><a href="https://github.com/mimmospoto">GitHub</a></li>
+        <!-- TODO: replace with your LinkedIn URL -->
+        <li><a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a></li>
+        <!-- TODO: add an email link if you want one public, e.g. <li><a href="mailto:you@example.com">Email</a></li> -->
+      </ul>
+    </div>
+
+    <section aria-labelledby="now">
+      <h2 id="now">What I'm working on</h2>
+      <ul class="now">
+        <li>A propensity-to-pay classifier at doValue that scores newly onboarded debtors so agents can prioritise outreach. It is in development: data exploration is done and the target definition comes next.</li>
+        <li>A shared dev, test and prod workflow on Databricks for my team, with code under version control.</li>
+        <li>Public portfolio work on taking models to production. The latest is a <a href="projects.html#loan-default">loan default scoring service</a> deployed on Azure.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Experience</h2>
+      <ol class="timeline" reversed>
+        <li>
+          <div class="when">Apr 2025 – now</div>
+          <div>
+            <h3>Data Scientist</h3>
+            <p class="where">doValue, Innovation, Rome</p>
+            <ul>
+              <li>Probability of default models for credit risk and propensity-to-pay models for debt collection.</li>
+              <li>Optimised PySpark pipelines over large Delta tables on Databricks, halving the runtime of a multi-table ETL query.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <!-- TODO: dates -->
+          <div class="when">YYYY – YYYY</div>
+          <div>
+            <h3>Data Scientist</h3>
+            <p class="where">Poste Italiane, Cyber Intelligence, Rome</p>
+            <ul>
+              <li>Developed deep neural networks for time-series forecasting of cyber attacks.</li>
+              <li>Anomaly detection with supervised and unsupervised models.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <!-- TODO: dates and one line on what you did -->
+          <div class="when">YYYY – YYYY</div>
+          <div>
+            <h3>Quantitative Trading Risk Analyst</h3>
+            <p class="where">BBVA, Madrid</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <ol class="timeline" reversed>
+        <li>
+          <!-- TODO: dates -->
+          <div class="when">YYYY – YYYY</div>
+          <div>
+            <h3>MSc Data Science</h3>
+            <p class="where">Sapienza Università di Roma</p>
+          </div>
+        </li>
+        <li>
+          <!-- TODO: dates -->
+          <div class="when">YYYY – YYYY</div>
+          <div>
+            <h3>MSc Financial Markets and Econometrics</h3>
+            <p class="where">Nova School of Business and Economics, Lisbon</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">2013 – 2016</div>
+          <div>
+            <h3>BSc Management and Economics</h3>
+            <p class="where">Bocconi University, Milan</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <dl class="facts">
+        <dt>Languages</dt>
+        <dd>Python, SQL, PySpark</dd>
+        <dt>Modelling</dt>
+        <dd>Credit scoring, gradient boosting, calibration, anomaly detection, time-series forecasting with PyTorch</dd>
+        <dt>Platforms</dt>
+        <dd>Databricks, Azure, MLflow, Docker, FastAPI, GitHub Actions</dd>
+        <dt>Spoken</dt>
+        <dd>Italian and English (fluent), Spanish (DELE B2), Portuguese (working)</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>Rome, Italy. Source on <a href="https://github.com/mimmospoto/mimmospoto.github.io">GitHub</a>.</p>
+  </footer>
+
+</div>
+</body>
+</html>
