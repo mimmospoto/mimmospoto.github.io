@@ -23,10 +23,16 @@
 
   <main>
     <div class="hero">
-      <h1>Domenico Spoto</h1>
-      <p class="lead">Data scientist in Rome. I build credit risk models, probability of default and propensity to pay, for debt collection at doValue, working in Python, PySpark and SQL on Databricks and Azure.</p>
+      <div class="hero-intro">
+        <div>
+          <h1>Domenico Spoto</h1>
+          <p class="lead">Data scientist in Rome. I build credit risk models, probability of default and propensity to pay, for debt collection at doValue, working in Python, PySpark and SQL on Databricks and Azure.</p>
+        </div>
+        <!-- Upload a square photo named photo.jpg next to this file -->
+        <img class="photo" src="photo.jpg" alt="Portrait of Domenico Spoto" width="152" height="152">
+      </div>
       <ul class="links">
-        <li><a href="cv.pdf">CV (PDF)</a></li>
+        <li><a class="btn" href="cv.pdf" download>Download CV</a></li>
         <li><a href="https://github.com/mimmospoto">GitHub</a></li>
         <!-- TODO: replace with your LinkedIn URL -->
         <li><a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a></li>
@@ -37,7 +43,7 @@
     <section aria-labelledby="now">
       <h2 id="now">What I'm working on</h2>
       <ul class="now">
-        <li>A propensity-to-pay classifier at doValue that scores newly onboarded debtors so agents can prioritise outreach. It is in development: data exploration is done and the target definition comes next.</li>
+        <li>A propensity-to-pay classifier at doValue that scores newly onboarded debtors so agents can prioritise outreach. It is currently in development.</li>
         <li>A shared dev, test and prod workflow on Databricks for my team, with code under version control.</li>
         <li>Public portfolio work on taking models to production. The latest is a <a href="projects.html#loan-default">loan default scoring service</a> deployed on Azure.</li>
       </ul>
