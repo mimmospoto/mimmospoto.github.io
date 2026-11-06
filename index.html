@@ -23,22 +23,25 @@
 
   <main>
     <div class="hero">
-      <div class="hero-intro">
-        <div>
-          <h1>Domenico Spoto</h1>
-          <p class="lead">Data scientist in Rome. I build credit risk models, probability of default and propensity to pay, for debt collection at doValue, working in Python, PySpark and SQL on Databricks and Azure.</p>
-        </div>
-        <!-- Upload a square photo named photo.jpg next to this file -->
-        <img class="photo" src="photo.jpg" alt="Portrait of Domenico Spoto" width="152" height="152">
-      </div>
+      <h1 class="greeting">Hi,<br>I'm <span class="hl-name">Domenico</span>.<br>I'm a <span class="hl-role">Data Scientist</span> at <span class="hl-name">doValue</span>.</h1>
       <ul class="links">
         <li><a class="btn" href="cv.pdf" download>Download CV</a></li>
         <li><a href="https://github.com/mimmospoto">GitHub</a></li>
-        <!-- TODO: replace with your LinkedIn URL -->
-        <li><a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a></li>
-        <!-- TODO: add an email link if you want one public, e.g. <li><a href="mailto:you@example.com">Email</a></li> -->
+        <li><a href="https://www.linkedin.com/in/domenico-spoto/">LinkedIn</a></li>
       </ul>
     </div>
+
+    <section class="about" aria-labelledby="about">
+      <div class="about-text">
+        <h2 id="about">About me</h2>
+        <p>I'm a data scientist in Rome, working in the Innovation team at doValue. I build credit risk models for debt collection: probability of default models, and propensity-to-pay models that help decide which debtors to contact first. Most of my work is in Python, PySpark and SQL on Databricks.</p>
+        <p>My background is in quantitative finance and econometrics. I studied management and economics at Bocconi, financial markets and econometrics at Nova in Lisbon, and data science at Sapienza. Before doValue I was a quantitative trading risk analyst at BBVA in Madrid, and a data scientist in the cyber intelligence team at Poste Italiane, forecasting cyber attacks with deep learning.</p>
+        <p>I care about models that hold up outside the notebook: validated on data they haven't seen, calibrated so the numbers mean something, and monitored once they're in use. My side projects follow the same idea, like a loan default model I took all the way to a live API.</p>
+        <p>I work in Italian, English and Spanish, and get by in Portuguese.</p>
+      </div>
+      <!-- Upload a portrait photo named photo.jpg next to this file -->
+      <img class="photo" src="photo.jpg" alt="Portrait of Domenico Spoto" width="240" height="300">
+    </section>
 
     <section aria-labelledby="now">
       <h2 id="now">What I'm working on</h2>
@@ -53,7 +56,7 @@
       <h2 id="experience">Experience</h2>
       <ol class="timeline" reversed>
         <li>
-          <div class="when">Apr 2025 – now</div>
+          <div class="when">Apr 2025 – present</div>
           <div>
             <h3>Data Scientist</h3>
             <p class="where">doValue, Innovation, Rome</p>
@@ -64,8 +67,7 @@
           </div>
         </li>
         <li>
-          <!-- TODO: dates -->
-          <div class="when">May 2023 – Mar 2025</div>
+          <div class="when">May 2023 – Apr 2025</div>
           <div>
             <h3>Data Scientist</h3>
             <p class="where">Poste Italiane, Cyber Intelligence, Rome</p>
@@ -76,11 +78,14 @@
           </div>
         </li>
         <li>
-          <!-- TODO: dates and one line on what you did -->
           <div class="when">Sep 2018 – Aug 2019</div>
           <div>
             <h3>Quantitative Trading Risk Analyst</h3>
             <p class="where">BBVA, Madrid</p>
+            <ul>
+              <li>Monitored market risk on trading desks: Value-at-Risk and Greek sensitivities for interest-rate and FX risk.</li>
+              <li>Automated P&amp;L and risk reporting in Python, cutting about 80% of the manual work.</li>
+            </ul>
           </div>
         </li>
       </ol>
@@ -90,23 +95,21 @@
       <h2 id="education">Education</h2>
       <ol class="timeline" reversed>
         <li>
-          <!-- TODO: dates -->
-          <div class="when">YYYY – YYYY</div>
+          <div class="when">Sep 2020 – Oct 2023</div>
           <div>
             <h3>MSc Data Science</h3>
             <p class="where">Sapienza Università di Roma</p>
           </div>
         </li>
         <li>
-          <!-- TODO: dates -->
-          <div class="when">YYYY – YYYY</div>
+          <div class="when">Sep 2016 – Feb 2018</div>
           <div>
-            <h3>MSc Financial Markets and Econometrics</h3>
-            <p class="where">Nova School of Business and Economics, Lisbon</p>
+            <h3>MSc International Master's in Finance</h3>
+            <p class="where">Nova School of Business and Economics, Lisbon. Specialisation in financial markets and econometrics.</p>
           </div>
         </li>
         <li>
-          <div class="when">2013 – 2016</div>
+          <div class="when">Sep 2013 – Jul 2016</div>
           <div>
             <h3>BSc Management and Economics</h3>
             <p class="where">Bocconi University, Milan</p>
