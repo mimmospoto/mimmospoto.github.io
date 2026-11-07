@@ -4,101 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects, Domenico Spoto</title>
-  <meta name="description" content="Portfolio projects by Domenico Spoto: a deployed loan default scoring service and a futures options open-interest tracker.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Spectral:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="refresh" content="0; url=./#projects">
+  <link rel="canonical" href="./#projects">
 </head>
 <body>
-<div class="wrap">
-
-  <header class="site-header">
-    <a class="home" href="./">Domenico Spoto</a>
-    <nav aria-label="Main">
-      <a href="./">About</a>
-      <a href="projects.html" aria-current="page">Projects</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <h1>Projects</h1>
-      <p class="lead">Things I've built outside work, with the code on GitHub. Each one says what it does, how it's built, and what it doesn't cover.</p>
-    </div>
-
-    <section class="project" id="loan-default" aria-labelledby="loan-default-title">
-      <h2 id="loan-default-title">Loan default scoring service <span class="status">Complete</span></h2>
-      <p class="stack">Python, LightGBM, MLflow, FastAPI, Docker, GitHub Actions, Azure Container Apps, Evidently</p>
-      <p>A credit default model taken from training to a live, monitored API. A lender sends a loan application and gets back a calibrated probability of default and a risk band from A to E. The model is deliberately simple; the engineering around it is the point.</p>
-
-      <table class="bands">
-        <caption>
-          Default rate by risk band
-          <span>Lending Club loans issued in 2015, unseen in training</span>
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Band</th>
-            <th scope="col">Observed default rate (bar), predicted PD (line)</th>
-            <th scope="col" class="num">Observed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">A</th><td class="bar-cell"><div class="bar" style="--obs:4.9;--pred:5.0" aria-label="Predicted 5.0%, observed 4.9%"></div></td><td class="num">4.9%</td></tr>
-          <tr><th scope="row">B</th><td class="bar-cell"><div class="bar" style="--obs:9.2;--pred:8.8" aria-label="Predicted 8.8%, observed 9.2%"></div></td><td class="num">9.2%</td></tr>
-          <tr><th scope="row">C</th><td class="bar-cell"><div class="bar" style="--obs:13.5;--pred:12.3" aria-label="Predicted 12.3%, observed 13.5%"></div></td><td class="num">13.5%</td></tr>
-          <tr><th scope="row">D</th><td class="bar-cell"><div class="bar" style="--obs:17.9;--pred:16.7" aria-label="Predicted 16.7%, observed 17.9%"></div></td><td class="num">17.9%</td></tr>
-          <tr><th scope="row">E</th><td class="bar-cell"><div class="bar" style="--obs:26.8;--pred:25.8" aria-label="Predicted 25.8%, observed 26.8%"></div></td><td class="num">26.8%</td></tr>
-        </tbody>
-      </table>
-      <p class="chart-note">
-        <span class="key"><i></i>Observed</span><span class="key"><i class="tick"></i>Predicted</span><br>
-        Default rates rise in every band. The model under-predicts slightly in B to E because the default rate rose from 13.3% in training to 14.8% in 2015, which is why the service monitors drift.
-      </p>
-
-      <ul class="points">
-        <li><strong>Out-of-time validation.</strong> Trained on 2012–2014 loans and tested on 2015: AUC 0.681 (Gini 0.362) against 0.674 for a logistic regression baseline.</li>
-        <li><strong>Leakage excluded by design.</strong> Lending Club's own grade, interest rate and instalment are left out, as are geography and free text, which can proxy protected attributes.</li>
-        <li><strong>One image, one model version.</strong> CI tests that the container predicts exactly like the training code, then deploys to Azure Container Apps.</li>
-        <li><strong>Monitoring and retraining.</strong> A drift report compares later vintages with training data, and a challenger model must pass a gate before a human promotes it.</li>
-      </ul>
-      <p>Not in scope: it is a portfolio project, not a production credit decision system, and includes no fairness audit.</p>
-      <p><a href="https://github.com/mimmospoto/loan-default-scoring">Code and design notes on GitHub</a></p>
-    </section>
-
-    <section class="project" id="oi-tracker" aria-labelledby="oi-tracker-title">
-      <h2 id="oi-tracker-title">Futures options open-interest tracker <span class="status">Complete</span></h2>
-      <p class="stack">Python, Selenium, pandas, openpyxl, pytest</p>
-      <p>Barchart shows only today's open interest in futures options. This tool saves a snapshot each day, strike by strike, so you can see where traders are building positions over time. It was built to follow coffee options and works with any futures root on Barchart, such as crude oil, corn or gold.</p>
-      <ul class="points">
-        <li>Fetches the option chains for the nearest contracts by reading the JSON the page itself loads, which is more reliable than parsing the rendered table.</li>
-        <li>Keeps a CSV history and rebuilds an Excel report: a summary with put/call ratios and the strikes with the highest open interest, plus a date-by-strike table and chart per contract.</li>
-        <li>Tested on synthetic option chains, so the tests need no network or browser.</li>
-      </ul>
-      <p><a href="https://github.com/mimmospoto/futures-options-oi-tracker">Code on GitHub</a></p>
-    </section>
-
-    <!--
-    In-progress project template. Copy, fill in, and uncomment.
-
-    <section class="project" id="SLUG" aria-labelledby="SLUG-title">
-      <h2 id="SLUG-title">Project name <span class="status wip">In progress</span></h2>
-      <p class="stack">Tools</p>
-      <p>What it does and why, in two or three sentences.</p>
-      <ul class="points">
-        <li>What is done so far.</li>
-        <li>What comes next.</li>
-      </ul>
-      <p><a href="https://github.com/mimmospoto/REPO">Code on GitHub</a></p>
-    </section>
-    -->
-  </main>
-
-  <footer>
-    <p>Rome, Italy. Source on <a href="https://github.com/mimmospoto/mimmospoto.github.io">GitHub</a>.</p>
-  </footer>
-
-</div>
+  <p>Projects have moved to the <a href="./#projects">main page</a>.</p>
 </body>
 </html>
